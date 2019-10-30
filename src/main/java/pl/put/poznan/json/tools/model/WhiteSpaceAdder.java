@@ -9,7 +9,7 @@ public class WhiteSpaceAdder extends JsonDecorator {
     public String getJson(){
         //TODO
         //tu zmienic jsonObject.getJson() na taki ze spacjami i zreturnowac
-        return jsonObject.getJson();
+        return jsonObject.getJson().toUpperCase();
     }
 
 }

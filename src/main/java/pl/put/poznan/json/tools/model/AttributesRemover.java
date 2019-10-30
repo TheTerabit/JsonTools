@@ -12,7 +12,7 @@ public class AttributesRemover extends JsonDecorator {
     public String getJson(){
         //TODO
         //tu zmienic jsonObject.getJson() na taki bez wskazanych atrybutów
-        return jsonObject.getJson();
+        return jsonObject.getJson() + "\n\n" + jsonObject.getJson();
     }
 
 }
