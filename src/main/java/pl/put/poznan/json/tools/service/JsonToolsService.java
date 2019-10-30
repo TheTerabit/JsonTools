@@ -14,25 +14,22 @@ import org.springframework.stereotype.Service;
 public class JsonToolsService {
 
     private final ParametersValidator parametersValidator;
-    private final AttributesService attributesService;
     private final ComparisonService comparisonService;
-    private final WhiteSpaceService whiteSpaceService;
 
-    public JsonToolsService(ParametersValidator parametersValidator, AttributesService attributesService, ComparisonService comparisonService, WhiteSpaceService whiteSpaceService) {
+    public JsonToolsService(ParametersValidator parametersValidator, ComparisonService comparisonService) {
         this.parametersValidator = parametersValidator;
-        this.attributesService = attributesService;
         this.comparisonService = comparisonService;
-        this.whiteSpaceService = whiteSpaceService;
     }
 
     public String processJson(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongJsonException {
-        JSONObject jsonObject = parametersValidator.validate(json, attributes, attributesMode, whiteSpaces);
-        jsonObject = attributesService.process(jsonObject, attributes, attributesMode);
-        jsonObject = whiteSpaceService.process(jsonObject, whiteSpaces);
-        return jsonObject.toString();
+        parametersValidator.validate(json, attributes, attributesMode, whiteSpaces);
+        //TODO
+        //sprawdz co, dekoruj i returnuj
+        return "json";
     }
 
     public String compareJsons(String[] jsons) {
+        //TODO
         //validateJsons();
         //compare();
         return "json";
