@@ -40,4 +40,6 @@ public class TextTransformerController {
     }
 }
 //komentarz
+//nie przyjmujcie go
+
 
