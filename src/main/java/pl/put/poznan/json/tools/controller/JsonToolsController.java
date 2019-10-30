@@ -3,6 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import pl.put.poznan.json.tools.service.JsonToolsService;
+import pl.put.poznan.json.tools.service.WrongJsonException;
 
 import java.util.Arrays;
 
@@ -22,8 +23,7 @@ public class JsonToolsController {
     public String processJson(@RequestBody String json,
                               @RequestParam(value="attributes", defaultValue="") String[] attributes,
                               @RequestParam(value="attributesMode", defaultValue="delete") String attributesMode,
-                              @RequestParam(value="whiteSpaces", defaultValue="add") String whiteSpaces) {
-        logParameters(json, whiteSpaces, attributesMode, attributes);
+                              @RequestParam(value="whiteSpaces", defaultValue="add") String whiteSpaces) throws WrongJsonException {
 
         return jsonToolsService.processJson(json, attributes, attributesMode, whiteSpaces);
     }
@@ -32,15 +32,6 @@ public class JsonToolsController {
     public String compareJsons(@RequestBody String[] jsons){
         return jsonToolsService.compareJsons(jsons);
     }
-
-
-    private void logParameters(String json, String whiteSpaces, String attributesMode, String[] attributes){
-        logger.debug(json);
-        logger.debug(whiteSpaces);
-        logger.debug(attributesMode);
-        logger.debug(Arrays.toString(attributes));
-    }
-
 }
 //komentarz
 //nie przyjmujcie go
