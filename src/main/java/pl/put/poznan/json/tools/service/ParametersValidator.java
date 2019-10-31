@@ -26,12 +26,17 @@ public class ParametersValidator {
         }
     }
 
-    private void validateJson(String json) throws WrongInputException {
+    public void validateJson(String json) throws WrongInputException {
         JSONParser parser = new JSONParser();
         try {
             JSONObject jsonObject = (JSONObject) parser.parse(json);
         } catch (ParseException e) {
             throw new WrongInputException("Wrong JSON input");
         }
+    }
+
+    public void validateSplit(String[] json) throws WrongInputException {
+        if(json.length != 2)
+            throw new WrongInputException("Wrong concatenated input");
     }
 }
