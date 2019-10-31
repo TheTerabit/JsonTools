@@ -8,26 +8,30 @@ import org.springframework.stereotype.Service;
 @Service
 public class ParametersValidator {
 
-    public void validate(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongJsonException {
+    public void validate(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongInputException {
         validateAttributtes(attributes, attributesMode);
         validateWhiteSpaces(whiteSpaces);
         validateJson(json);
     }
 
-    private void validateAttributtes(String[] attributes, String attributesMode) {
-        //TODO
+    private void validateAttributtes(String[] attributes, String attributesMode) throws WrongInputException {
+        if ((attributesMode != null) && (!attributesMode.equals("delete")) && (!attributesMode.equals("pick"))){
+            throw new WrongInputException("Wrong value of attributeMode parameter");
+        }
     }
 
-    private void validateWhiteSpaces(String whiteSpaces) {
-        //TODO
+    private void validateWhiteSpaces(String whiteSpaces) throws WrongInputException {
+        if ((whiteSpaces != null) && (!whiteSpaces.equals("delete")) && (!whiteSpaces.equals("add"))){
+            throw new WrongInputException("Wrong value of whiteSpace parameter");
+        }
     }
 
-    private void validateJson(String json) throws WrongJsonException {
+    private void validateJson(String json) throws WrongInputException {
         JSONParser parser = new JSONParser();
         try {
             JSONObject jsonObject = (JSONObject) parser.parse(json);
         } catch (ParseException e) {
-            throw new WrongJsonException("Wrong JSON input");
+            throw new WrongInputException("Wrong JSON input");
         }
     }
 }
