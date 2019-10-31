@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
-              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -45,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -57,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="108">
               <caret line="23" column="97" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -93,19 +93,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/WhiteSpaceRemover.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/WhiteSpaceAdder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -251,7 +251,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572540979321" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572540982243" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -259,6 +259,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="pl.put.poznan.json.tools.model.decorations" />
       <recent name="pl.put.poznan.json.tools" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -357,18 +358,17 @@
       <workItem from="1572431161679" duration="2488000" />
       <workItem from="1572439047064" duration="2478000" />
       <workItem from="1572445666187" duration="10841000" />
-      <workItem from="1572539206670" duration="1760000" />
+      <workItem from="1572539206670" duration="2310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34998000" />
+    <option name="totallyTimeSpent" value="35548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.33355704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33355704" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -379,14 +379,14 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25141242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25141242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29943502" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29943502" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32992327" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="12" />
@@ -491,14 +491,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WhiteSpaceService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/AttributesService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/AttributesPicker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/AttributesRemover.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="5" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="5" />
@@ -543,24 +543,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/WhiteSpaceRemover.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/WhiteSpaceAdder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -596,17 +589,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="97" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="97" />
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -620,6 +603,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="23" column="97" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>

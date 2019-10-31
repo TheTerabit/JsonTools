@@ -1,4 +1,7 @@
-package pl.put.poznan.json.tools.model;
+package pl.put.poznan.json.tools.model.decorations;
+
+import pl.put.poznan.json.tools.model.JsonDecorator;
+import pl.put.poznan.json.tools.model.JsonObject;
 
 public class AttributesRemover extends JsonDecorator {
 

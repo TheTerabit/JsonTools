@@ -3,6 +3,10 @@ package pl.put.poznan.json.tools.service;
 
 import org.springframework.stereotype.Service;
 import pl.put.poznan.json.tools.model.*;
+import pl.put.poznan.json.tools.model.decorations.AttributesPicker;
+import pl.put.poznan.json.tools.model.decorations.AttributesRemover;
+import pl.put.poznan.json.tools.model.decorations.WhiteSpaceAdder;
+import pl.put.poznan.json.tools.model.decorations.WhiteSpaceRemover;
 
 /**
  * This is just an example to show that the logic should be outside the REST service.

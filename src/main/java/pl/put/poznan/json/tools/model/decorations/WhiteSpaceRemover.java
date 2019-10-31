@@ -1,6 +1,8 @@
-package pl.put.poznan.json.tools.model;
+package pl.put.poznan.json.tools.model.decorations;
 
 import org.json.simple.JSONObject;
+import pl.put.poznan.json.tools.model.JsonDecorator;
+import pl.put.poznan.json.tools.model.JsonObject;
 
 public class WhiteSpaceRemover extends JsonDecorator {
 
