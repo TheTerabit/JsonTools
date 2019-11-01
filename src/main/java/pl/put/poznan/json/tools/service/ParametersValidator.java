@@ -26,13 +26,16 @@ public class ParametersValidator {
         }
     }
 
-    public void validateJson(String json) throws WrongInputException {
+    public JSONObject validateJson(String json) throws WrongInputException {
         JSONParser parser = new JSONParser();
+        JSONObject jsonObject;
         try {
-            JSONObject jsonObject = (JSONObject) parser.parse(json);
+            jsonObject = (JSONObject) parser.parse(json);
+            System.out.println(jsonObject.toString());
         } catch (ParseException e) {
             throw new WrongInputException("Wrong JSON input");
         }
+        return jsonObject;
     }
 
     public void validateSplit(String[] json) throws WrongInputException {
