@@ -12,6 +12,7 @@ public class WhiteSpaceAdder extends JsonDecorator {
 
     public String getJson() {
         //tu zmienic jsonObject.getJson() na taki ze spacjami i zreturnowac/
+        
         return jsonObject.getJson()
                 .replaceAll("\":", "\": ")
                 .replaceAll("\",", "\",\n\t")
