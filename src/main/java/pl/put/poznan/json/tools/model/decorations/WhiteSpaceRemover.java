@@ -5,9 +5,7 @@ import org.json.simple.parser.ParseException;
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.JSONObject;
-import pl.put.poznan.json.tools.service.ParametersValidator;
-import pl.put.poznan.json.tools.service.WrongInputException;
+
 
 public class WhiteSpaceRemover extends JsonDecorator {
 
@@ -16,8 +14,6 @@ public class WhiteSpaceRemover extends JsonDecorator {
     }
 
     public String getJson() {
-
-
         JSONParser parser = new JSONParser();
         JSONObject clear_json;
         try {
