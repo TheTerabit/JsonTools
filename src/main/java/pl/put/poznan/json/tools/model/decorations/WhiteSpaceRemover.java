@@ -13,7 +13,8 @@ public class WhiteSpaceRemover extends JsonDecorator {
         super(jsonObject);
     }
 
-    public String getJson() {
+    public String getJson() { 
+        
         JSONParser parser = new JSONParser();
         JSONObject clear_json;
         try {
