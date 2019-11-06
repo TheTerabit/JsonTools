@@ -9,7 +9,6 @@ import java.util.List;
 public class ComparisonService {
 
     public List<Integer> compare(String s, String s1) {
-
         return new ArrayList<Integer>();
     }
 }
