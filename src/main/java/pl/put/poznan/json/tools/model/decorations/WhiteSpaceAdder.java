@@ -2,6 +2,7 @@ package pl.put.poznan.json.tools.model.decorations;
 
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
+import pl.put.poznan.json.tools.service.WrongInputException;
 
 
 public class WhiteSpaceAdder extends JsonDecorator {
@@ -10,9 +11,11 @@ public class WhiteSpaceAdder extends JsonDecorator {
         super(jsonObject);
     }
 
-    public String getJson() {
-        //tu zmienic jsonObject.getJson() na taki ze spacjami i zreturnowac/
-        
+    public String getJson() throws WrongInputException {
+        return WhiteCharactersAdder();
+    }
+
+    private String WhiteCharactersAdder() throws WrongInputException {
         return jsonObject.getJson()
                 .replaceAll("\":", "\": ")
                 .replaceAll("\",", "\",\n\t")
