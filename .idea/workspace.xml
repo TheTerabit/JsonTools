@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ValidationFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WrongAttributeModeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/ioprojectarchitecture.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,13 +19,50 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="499126552">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="673" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="673" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
+<<<<<<< HEAD
               <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+>>>>>>> iwo
               <folding>
                 <element signature="e#240#241#0" expanded="true" />
                 <element signature="e#287#288#0" expanded="true" />
@@ -67,7 +104,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
+<<<<<<< HEAD
               <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+=======
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+>>>>>>> iwo
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +119,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+=======
+            <state relative-caret-position="272">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+>>>>>>> iwo
             </state>
           </provider>
         </entry>
@@ -87,8 +133,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="204">
               <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+=======
+            <state relative-caret-position="221">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+>>>>>>> iwo
             </state>
           </provider>
         </entry>
@@ -118,7 +169,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonDecorator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
+<<<<<<< HEAD
               <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+=======
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+>>>>>>> iwo
             </state>
           </provider>
         </entry>
@@ -176,12 +231,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WrongAttributeModeException.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ValidationFailedException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonComparisonWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java" />
       </list>
     </option>
   </component>
@@ -199,10 +258,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1099" />
+    <option name="x" value="320" />
+    <option name="width" value="1600" />
+    <option name="height" value="1095" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,15 +276,26 @@
             <path>
               <item name="JsonTools" type="b2602c69:ProjectViewProjectNode" />
               <item name="JsonTools" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="JsonTools" type="b2602c69:ProjectViewProjectNode" />
               <item name="JsonTools" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> iwo
             </path>
             <path>
               <item name="JsonTools" type="b2602c69:ProjectViewProjectNode" />
               <item name="JsonTools" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JsonTools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JsonTools" type="462c0819:PsiDirectoryNode" />
+>>>>>>> iwo
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,7 +366,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572599880720" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572600786819" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -407,11 +476,15 @@
       <workItem from="1572439047064" duration="2478000" />
       <workItem from="1572445666187" duration="10841000" />
       <workItem from="1572539206670" duration="2310000" />
+      <workItem from="1572980637413" duration="970000" />
+      <workItem from="1572983361028" duration="284000" />
+      <workItem from="1572984258236" duration="65000" />
+      <workItem from="1573039816854" duration="1222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41377000" />
+    <option name="totallyTimeSpent" value="51251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -427,7 +500,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25141242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25106382" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,12 +509,12 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.29929078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32992327" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="14" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" />
-      <window_info anchor="bottom" id="Database Changes" order="16" />
+      <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
       <window_info anchor="bottom" id="Azure Activity Log" order="18" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -456,50 +529,12 @@
       <window_info anchor="right" id="Maven Projects" order="9" />
       <window_info anchor="right" id="Maven" order="10" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33355704" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Azure Explorer" order="7" />
-      <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25141242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.29943502" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32992327" />
-      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="12" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="14" />
-      <window_info anchor="bottom" id="Java Enterprise" order="15" />
-      <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
-      <window_info anchor="bottom" id="Azure Activity Log" order="18" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Bean Validation" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.13.RELEASE/spring-web-4.3.13.RELEASE.jar!/org/springframework/web/bind/annotation/RequestParam.class" />
@@ -528,38 +563,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WhiteSpaceService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/AttributesService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonObject.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="255">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+=======
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+>>>>>>> iwo
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonDecorator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WrongJsonException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WrongAttributeModeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="204">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+=======
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+>>>>>>> iwo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+=======
+        <state relative-caret-position="1350">
+          <caret line="683" column="17" lean-forward="true" selection-start-line="683" selection-start-column="17" selection-end-line="683" selection-end-column="17" />
+>>>>>>> iwo
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/RawJson.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#145#146#0" expanded="true" />
             <element signature="e#177#178#0" expanded="true" />
@@ -567,6 +619,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -594,9 +647,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java">
+>>>>>>> iwo
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="544">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -615,20 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ComparisonService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#240#241#0" expanded="true" />
             <element signature="e#287#288#0" expanded="true" />
@@ -636,10 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/JsonToolsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/controller/JsonToolsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="181">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -648,15 +697,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/WrongInputException.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="187">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
+=======
         <state relative-caret-position="85">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+>>>>>>> iwo
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/service/ParametersValidator.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="544">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+=======
         <state relative-caret-position="476">
           <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+>>>>>>> iwo
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceRemover.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+=======
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+>>>>>>> iwo
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/JsonDecorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesRemover.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="476">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+=======
+        <state relative-caret-position="221">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/AttributesPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/put/poznan/json/tools/model/decorations/WhiteSpaceAdder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+>>>>>>> iwo
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
