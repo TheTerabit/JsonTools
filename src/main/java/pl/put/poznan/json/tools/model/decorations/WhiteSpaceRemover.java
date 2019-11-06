@@ -1,6 +1,5 @@
 package pl.put.poznan.json.tools.model.decorations;
 
-import org.json.simple.JSONObject;
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
 import pl.put.poznan.json.tools.service.ParametersValidator;
@@ -14,14 +13,12 @@ public class WhiteSpaceRemover extends JsonDecorator {
     }
 
     public String getJson() throws WrongInputException{
-            return WhiteCharactersRemover();
+            return removeWhiteSpaces(jsonObject.getJson());
     }
 
-    private String WhiteCharactersRemover() throws WrongInputException
+    private String removeWhiteSpaces(String json) throws WrongInputException
     {
         ParametersValidator parser = new ParametersValidator();
-        JSONObject clear_json;
-        clear_json = parser.validateJson(jsonObject.getJson());
-        return clear_json.toString();
+        return parser.validateJson(json).toString();
     }
 }
