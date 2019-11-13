@@ -3,6 +3,7 @@ package pl.put.poznan.json.tools.service;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 import pl.put.poznan.json.tools.model.*;
 import pl.put.poznan.json.tools.model.decorations.AttributesPicker;
@@ -27,7 +28,7 @@ public class JsonToolsService {
         this.comparisonService = comparisonService;
     }
 
-    public String processJson(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongInputException {
+    public String processJson(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongInputException, ParseException {
         parametersValidator.validate(json, attributes, attributesMode, whiteSpaces);
         JsonObject jsonObject = createJsonObject(json, attributes, attributesMode, whiteSpaces);
         return jsonObject.getJson();

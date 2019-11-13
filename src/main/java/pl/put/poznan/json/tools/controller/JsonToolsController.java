@@ -1,6 +1,7 @@
 package pl.put.poznan.json.tools.controller;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class JsonToolsController {
     public String processJson(@RequestBody String json,
                               @RequestParam(value="attributes", defaultValue="") String[] attributes,
                               @RequestParam(value="attributesMode", defaultValue="delete") String attributesMode,
-                              @RequestParam(value="whiteSpaces", defaultValue="add") String whiteSpaces) throws WrongInputException {
+                              @RequestParam(value="whiteSpaces", defaultValue="add") String whiteSpaces) throws WrongInputException, ParseException {
 
         return jsonToolsService.processJson(json, attributes, attributesMode, whiteSpaces);
     }

@@ -1,5 +1,8 @@
 package pl.put.poznan.json.tools.model.decorations;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
 import pl.put.poznan.json.tools.service.WrongInputException;
@@ -13,10 +16,17 @@ public class AttributesRemover extends JsonDecorator {
         this.attributes = attributes;
     }
 
-    public String getJson() throws WrongInputException {
-        //TODO
-        //tu zmienic jsonObject.getJson() na taki bez wskazanych atrybutów
-        return jsonObject.getJson() + "\n\n" + jsonObject.getJson();
+    public String getJson() throws WrongInputException, ParseException {
+        return removeAtrributes(jsonObject.getJson());
+    }
+
+    private String removeAtrributes(String json) throws ParseException {
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObject = (JSONObject) parser.parse(json);
+        for (int i = 0; i < attributes.length; i++) {
+            jsonObject.remove(attributes[i]);
+        }
+        return jsonObject.toString();
     }
 
 }
