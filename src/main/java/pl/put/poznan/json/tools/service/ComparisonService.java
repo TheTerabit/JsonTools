@@ -27,13 +27,11 @@ public class ComparisonService {
         else {
             String[] json1Splitted = splitJson(json1);
             String[] json2Splitted = splitJson(json2);
-            //String[] sSplitted = json1.split("\\r?\\n");
-            //String[] s1Splitted = json2.split("\\r?\\n");
-            return json1Splitted.length > json2Splitted.length ? makeList(json1Splitted, json2Splitted) : makeList(json2Splitted, json1Splitted);
+            return json1Splitted.length > json2Splitted.length ? findDifferences(json1Splitted, json2Splitted) : findDifferences(json2Splitted, json1Splitted);
         }
     }
 
-    private List<Integer> makeList(String[] json1Splitted, String[] json2Splitted) {
+    private List<Integer> findDifferences(String[] json1Splitted, String[] json2Splitted) {
         ArrayList<Integer> differences = new ArrayList<Integer>();
         for (int i = 0; i < json1Splitted.length; i++) {
             if (i < json2Splitted.length) {

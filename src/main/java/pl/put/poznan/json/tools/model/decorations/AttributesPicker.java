@@ -18,28 +18,33 @@ public class AttributesPicker extends JsonDecorator {
     }
 
     public String getJson() throws WrongInputException, ParseException {
-        return pickAttributes(jsonObject.getJson());
+        return getJsonWithAttributes(jsonObject.getJson());
     }
 
-    private String pickAttributes(String json) throws ParseException {
+    private String getJsonWithAttributes(String json) throws ParseException {
         JSONParser parser = new JSONParser();
         JSONObject jsonObject = (JSONObject) parser.parse(json);
-        return parseAttributes(jsonObject);
+        return pickAttributes(jsonObject);
     }
 
-    private String parseAttributes(JSONObject json) {
-        StringBuilder output = new StringBuilder("{\n\t");
-        Object obj;
+    private String pickAttributes(JSONObject json) {
+        StringBuilder stringBuilder = new StringBuilder("{\n\t");
         for (String attribute : attributes) {
-            obj = json.get(attribute);
-            if (obj instanceof Integer || obj instanceof Long || obj instanceof Float || obj instanceof Double || obj instanceof Boolean)
-                output.append("\"").append(attribute).append("\": ").append(obj).append("\n\t");
-            else if (obj instanceof String)
-                output.append("\"").append(attribute).append("\": ").append("\"").append(obj).append("\"\n\t");
-            else if (obj instanceof JSONArray || obj instanceof JSONObject)
-                output.append("\"").append(attribute).append("\": ").append(obj.toString()).append("\n\t");
+            stringBuilder = concatenateAttributes(attribute, json.get(attribute), stringBuilder);
         }
-        output.append("}");
-        return output.toString().replace("\t}","}");
+        stringBuilder.append("}");
+        return stringBuilder.toString().replace("\t}", "}");
+    }
+
+    private StringBuilder concatenateAttributes(String attribute, Object valueOfAttribute, StringBuilder stringBuilder) {
+
+        if (valueOfAttribute instanceof Integer || valueOfAttribute instanceof Long || valueOfAttribute instanceof Float || valueOfAttribute instanceof Double || valueOfAttribute instanceof Boolean)
+            stringBuilder.append("\"").append(attribute).append("\": ").append(valueOfAttribute).append("\n\t");
+        else if (valueOfAttribute instanceof String)
+            stringBuilder.append("\"").append(attribute).append("\": ").append("\"").append(valueOfAttribute).append("\"\n\t");
+        else if (valueOfAttribute instanceof JSONArray || valueOfAttribute instanceof JSONObject)
+            stringBuilder.append("\"").append(attribute).append("\": ").append(valueOfAttribute.toString()).append("\n\t");
+
+        return stringBuilder;
     }
 }
