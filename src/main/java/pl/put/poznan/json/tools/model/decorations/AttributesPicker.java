@@ -11,6 +11,7 @@ import pl.put.poznan.json.tools.service.WrongInputException;
 public class AttributesPicker extends JsonDecorator {
 
     private String[] attributes;
+    private StringBuilder stringBuilder;
 
     public AttributesPicker(JsonObject jsonObject, String[] attributes) {
         super(jsonObject);
@@ -28,15 +29,15 @@ public class AttributesPicker extends JsonDecorator {
     }
 
     private String pickAttributes(JSONObject json) {
-        StringBuilder stringBuilder = new StringBuilder("{\n\t");
+        stringBuilder = new StringBuilder("{\n\t");
         for (String attribute : attributes) {
-            stringBuilder = concatenateAttributes(attribute, json.get(attribute), stringBuilder);
+            stringBuilder = concatenateAttributes(attribute, json.get(attribute));
         }
         stringBuilder.append("}");
         return stringBuilder.toString().replace("\t}", "}");
     }
 
-    private StringBuilder concatenateAttributes(String attribute, Object valueOfAttribute, StringBuilder stringBuilder) {
+    private StringBuilder concatenateAttributes(String attribute, Object valueOfAttribute) {
 
         if (valueOfAttribute instanceof Integer || valueOfAttribute instanceof Long || valueOfAttribute instanceof Float || valueOfAttribute instanceof Double || valueOfAttribute instanceof Boolean)
             stringBuilder.append("\"").append(attribute).append("\": ").append(valueOfAttribute).append("\n\t");
