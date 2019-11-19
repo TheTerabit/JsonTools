@@ -8,10 +8,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class ParametersValidator {
 
-    public void validate(String json, String[] attributes, String attributesMode, String whiteSpaces) throws WrongInputException {
+    public void validate(String json, String[] attributes, String attributesMode, String whiteSpaces, String removeNulls) throws WrongInputException {
         validateAttributtes(attributes, attributesMode);
         validateWhiteSpaces(whiteSpaces);
+        validateRemoveNulls(removeNulls);
         validateJson(json);
+    }
+
+    private void validateRemoveNulls(String removeNulls) throws WrongInputException {
+        if ((!removeNulls.equals("true")) && (!removeNulls.equals("false"))) {
+            throw new WrongInputException("Wrong value of removeNulls parameter");
+        }
     }
 
     private void validateAttributtes(String[] attributes, String attributesMode) throws WrongInputException {
@@ -26,20 +33,14 @@ public class ParametersValidator {
         }
     }
 
-    public JSONObject validateJson(String json) throws WrongInputException {
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject;
-        try {
-            jsonObject = (JSONObject) parser.parse(json);
-            System.out.println(jsonObject.toString());
-        } catch (ParseException e) {
-            throw new WrongInputException("Wrong JSON input");
+    public void validateJson(String json) throws WrongInputException {
+        if(!json.equals(" ")) {
+            new StringToJsonParser().parse(json);
         }
-        return jsonObject;
     }
 
     public void validateSplit(String[] json) throws WrongInputException {
-        if(json.length != 2)
+        if(json.length > 2)
             throw new WrongInputException("Wrong concatenated input");
     }
 }
