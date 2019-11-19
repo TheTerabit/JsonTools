@@ -24,11 +24,12 @@ public class JsonToolsController {
 
     @PostMapping("/process")
     public String processJson(@RequestBody String json,
-                              @RequestParam(value="attributes", defaultValue="") String[] attributes,
-                              @RequestParam(value="attributesMode", defaultValue="delete") String attributesMode,
-                              @RequestParam(value="whiteSpaces", defaultValue="add") String whiteSpaces) throws WrongInputException {
+                              @RequestParam(value="attributes", defaultValue = "") String[] attributes,
+                              @RequestParam(value="attributesMode", defaultValue = "delete") String attributesMode,
+                              @RequestParam(value="whiteSpaces", defaultValue = "add") String whiteSpaces,
+                              @RequestParam(value="removeNulls", defaultValue = "false") String removeNulls) throws WrongInputException {
 
-        return jsonToolsService.processJson(json, attributes, attributesMode, whiteSpaces);
+        return jsonToolsService.processJson(json, attributes, attributesMode, whiteSpaces, removeNulls);
     }
 
     @PostMapping("/compare")
