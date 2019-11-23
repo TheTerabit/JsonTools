@@ -19,16 +19,11 @@ public class NullRemover extends JsonDecorator {
         jsonString = removeBraces(jsonString);
         List<String> jsonAttributes = getAttributes(jsonString);
 
-        ArrayList<List<String>> jsonAttributesSplited;
-        jsonAttributesSplited = splitAttributes(jsonAttributes);
-
-        ArrayList<String> jsonAttributesRemovedNulls;
-        jsonAttributesRemovedNulls = removeNulls(jsonAttributesSplited);
+        ArrayList<List<String>> jsonAttributesSplited = splitAttributes(jsonAttributes);
+        ArrayList<String> jsonAttributesRemovedNulls = removeNulls(jsonAttributesSplited);
 
         String jsonFinal = joinJson(jsonAttributesRemovedNulls);
 
-        System.out.println(jsonFinal);
-        System.out.println("XDDD");
         return jsonFinal;
     }
 
@@ -56,8 +51,10 @@ public class NullRemover extends JsonDecorator {
     private List<String> removeWhiteSpaces(List<String> list) {
         list.set(0, list.get(0).substring(list.get(0).indexOf("\""), list.get(0).length()));
 
-        if(list.get(1).lastIndexOf("\"") != -1) list.set(1, list.get(1).substring(0, list.get(1).lastIndexOf("\"") + 1));
-        else list.set(1, list.get(1).replaceAll("\\s+", ""));
+        if(list.get(1).lastIndexOf("\"") != -1)
+            list.set(1, list.get(1).substring(0, list.get(1).lastIndexOf("\"") + 1));
+        else
+            list.set(1, list.get(1).replaceAll("\\s+", ""));
 
         return list;
     }
@@ -74,8 +71,10 @@ public class NullRemover extends JsonDecorator {
     }
 
     private boolean isNull(List<String> item) {
-        if(!item.get(1).matches("\"\\s*\"") && !item.get(1).startsWith("null") && !item.get(1).startsWith("[]") && !item.get(1).startsWith("{}")) return true;
-        else return false;
+        if(!item.get(1).matches("\"\\s*\"") && !item.get(1).startsWith("null") && !item.get(1).startsWith("[]") && !item.get(1).startsWith("{}"))
+            return true;
+        else
+            return false;
     }
 
     private String joinJson(ArrayList<String> jsonList) {
