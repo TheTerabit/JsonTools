@@ -15,35 +15,70 @@ public class NullRemover extends JsonDecorator {
     }
 
     public String getJson() throws WrongInputException {
-        String jsonString                               = jsonObject.getJson();
-        jsonString                                      = jsonString.substring(1, jsonString.length() - 1);
-        List<String> jsonAttributes                     = Arrays.asList(jsonString.split("\\s*,\\s*"));
-        ArrayList<List<String>> jsonAttributesSplited   = new ArrayList<>();
-        ArrayList<String> jsonAttributesRemovedNulls    = new ArrayList<>();
+        String jsonString = jsonObject.getJson();
+        jsonString = removeBraces(jsonString);
+        List<String> jsonAttributes = getAttributes(jsonString);
 
-        splitAttributes(jsonAttributes, jsonAttributesSplited);
-        removeNulls(jsonAttributesSplited, jsonAttributesRemovedNulls);
+        ArrayList<List<String>> jsonAttributesSplited;
+        jsonAttributesSplited = splitAttributes(jsonAttributes);
 
-        String jsonFinal = "{\n\t" + String.join(",\n\t", jsonAttributesRemovedNulls) + "\n}";
+        ArrayList<String> jsonAttributesRemovedNulls;
+        jsonAttributesRemovedNulls = removeNulls(jsonAttributesSplited);
 
+        String jsonFinal = joinJson(jsonAttributesRemovedNulls);
+
+        System.out.println(jsonFinal);
+        System.out.println("XDDD");
         return jsonFinal;
     }
 
-    private void splitAttributes(List<String> originalList, ArrayList<List<String>> splitedList) {
+    private String removeBraces(String json) {
+        return json.substring(1, json.length() - 1);
+    }
+
+    private List<String> getAttributes(String json) {
+        return Arrays.asList(json.split("\\s*,\\s*"));
+    }
+
+    private ArrayList<List<String>> splitAttributes(List<String> originalList) {
+        ArrayList<List<String>> splitedList = new ArrayList<>();
+
         originalList.forEach(item -> splitedList.add(Arrays.asList(item.split("\\s*: \\s*"))));
 
         splitedList.forEach(item -> {
-            item.set(0, item.get(0).substring(item.get(0).indexOf("\""), item.get(0).length()));
-
-            if(item.get(1).lastIndexOf("\"") != -1) item.set(1, item.get(1).substring(0, item.get(1).lastIndexOf("\"") + 1));
-            else item.set(1, item.get(1).replaceAll("\\s+", ""));
+            item.set(0, removeWhiteSpaces(item).get(0));
+            item.set(1, removeWhiteSpaces(item).get(1));
         });
+
+        return splitedList;
     }
 
-    private void removeNulls(ArrayList<List<String>> originalList, ArrayList<String> removedNullsList) {
+    private List<String> removeWhiteSpaces(List<String> list) {
+        list.set(0, list.get(0).substring(list.get(0).indexOf("\""), list.get(0).length()));
+
+        if(list.get(1).lastIndexOf("\"") != -1) list.set(1, list.get(1).substring(0, list.get(1).lastIndexOf("\"") + 1));
+        else list.set(1, list.get(1).replaceAll("\\s+", ""));
+
+        return list;
+    }
+
+    private ArrayList<String> removeNulls(ArrayList<List<String>> originalList) {
+        ArrayList<String> removedNullsList = new ArrayList<>();
+
         originalList.forEach(item -> {
-            if(!item.get(1).matches("\"\\s*\"") && !item.get(1).startsWith("null") && !item.get(1).startsWith("[]") && !item.get(1).startsWith("{}"))
+            if(isNull(item))
                 removedNullsList.add(String.join(": ", item));
         });
+
+        return removedNullsList;
+    }
+
+    private boolean isNull(List<String> item) {
+        if(!item.get(1).matches("\"\\s*\"") && !item.get(1).startsWith("null") && !item.get(1).startsWith("[]") && !item.get(1).startsWith("{}")) return true;
+        else return false;
+    }
+
+    private String joinJson(ArrayList<String> jsonList) {
+        return "{\n\t" + String.join(",\n\t", jsonList) + "\n}";
     }
 }
