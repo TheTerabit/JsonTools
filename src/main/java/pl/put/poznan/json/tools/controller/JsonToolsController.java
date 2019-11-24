@@ -1,6 +1,7 @@
 package pl.put.poznan.json.tools.controller;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -47,7 +48,7 @@ public class JsonToolsController {
         logger.debug("removeNulls: " + processProperties.getRemoveNulls());
     }
     private void logCompare(String jsonComparisonWrapper){
-        logger.info("Post request at /api/oompare");
+        logger.info("Post request at /api/compare");
         logger.debug("JSONs: " + jsonComparisonWrapper);
     }
 }

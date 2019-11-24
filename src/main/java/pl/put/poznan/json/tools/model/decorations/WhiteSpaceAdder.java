@@ -1,5 +1,6 @@
 package pl.put.poznan.json.tools.model.decorations;
 
+import org.json.simple.parser.ParseException;
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
 import pl.put.poznan.json.tools.service.ParametersValidator;
@@ -18,8 +19,7 @@ public class WhiteSpaceAdder extends JsonDecorator {
         return addWhiteSpaces(minificatedJson);
     }
 
-    private String removeWhiteSpaces(String json) throws WrongInputException
-    {
+    private String removeWhiteSpaces(String json) throws WrongInputException {
         return this.stringToJsonParser.parse(json).toString();
     }
 
