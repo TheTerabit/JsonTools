@@ -14,7 +14,7 @@ abstract public class JsonDecorator implements JsonObject {
         this.stringToJsonParser = new StringToJsonParser();
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
         return jsonObject.getJson();
     }
 

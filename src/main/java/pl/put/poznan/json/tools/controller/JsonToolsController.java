@@ -29,7 +29,7 @@ public class JsonToolsController {
                               @RequestParam(value="attributes", defaultValue = "") String[] attributes,
                               @RequestParam(value="attributesMode", defaultValue = "delete") String attributesMode,
                               @RequestParam(value="whiteSpaces", defaultValue = "add") String whiteSpaces,
-                              @RequestParam(value="removeNulls", defaultValue = "false") String removeNulls) throws WrongInputException, ParseException {
+                              @RequestParam(value="removeNulls", defaultValue = "false") String removeNulls) throws WrongInputException {
         ProcessProperties processProperties = new ProcessProperties(json, attributes, attributesMode, whiteSpaces, removeNulls);
         logProcess(processProperties);
         return jsonToolsService.processJson(processProperties);

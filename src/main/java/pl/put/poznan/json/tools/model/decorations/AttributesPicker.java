@@ -18,13 +18,12 @@ public class AttributesPicker extends JsonDecorator {
         this.attributes = attributes;
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
         return getJsonWithAttributes(jsonObject.getJson());
     }
 
-    private String getJsonWithAttributes(String json) throws ParseException {
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject = (JSONObject) parser.parse(json);
+    private String getJsonWithAttributes(String json) throws WrongInputException {
+        JSONObject jsonObject = this.stringToJsonParser.parse(json);
         return pickAttributes(jsonObject);
     }
 

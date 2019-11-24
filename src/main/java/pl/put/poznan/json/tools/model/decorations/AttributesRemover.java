@@ -16,13 +16,12 @@ public class AttributesRemover extends JsonDecorator {
         this.attributes = attributes;
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
         return removeAtrributes(jsonObject.getJson());
     }
 
-    private String removeAtrributes(String json) throws ParseException {
-        JSONParser parser = new JSONParser();
-        JSONObject jsonObject = (JSONObject) parser.parse(json);
+    private String removeAtrributes(String json) throws WrongInputException {
+        JSONObject jsonObject = this.stringToJsonParser.parse(json);
         for (int i = 0; i < attributes.length; i++) {
             jsonObject.remove(attributes[i]);
         }

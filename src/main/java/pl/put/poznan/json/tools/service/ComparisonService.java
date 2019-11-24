@@ -3,6 +3,7 @@ package pl.put.poznan.json.tools.service;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -12,24 +13,10 @@ public class ComparisonService {
     private String[] json2;
 
     public List<Integer> compare(String json1, String json2) {
-        if (trimJson(json1).equals(trimJson(json2)))
+        if (trimJson(json1).equals(trimJson(json2)) || trimJson(json1).replaceAll("\\s", "").equals(trimJson(json2).replaceAll("\\s","")))
             return new ArrayList<Integer>();
-        else if (trimJson(json1).replaceAll("\\s", "").equals(trimJson(json2).replaceAll("\\s",""))){
-            System.out.println(trimJson(json1).replaceAll("\\s", ""));
-            System.out.println(trimJson(json2).replaceAll("\\s", ""));
-            return new ArrayList<Integer>();
-        }
         else {
-            String[] json1Splitted = splitJson(trimJson(json1));
-            String[] json2Splitted = splitJson(trimJson(json2));
-            if(json1Splitted.length > json2Splitted.length) {
-                this.json1=json1Splitted;
-                this.json2=json2Splitted;
-            }
-            else {
-                this.json1=json2Splitted;
-                this.json2=json1Splitted;
-            }
+            compareJsons(splitJson(trimJson(json1)), splitJson(trimJson(json2)));
             return findDifferences();
         }
     }
@@ -42,16 +29,33 @@ public class ComparisonService {
         return json.split("\\r?\\n");
     }
 
+    private void compareJsons(String[] json1Splitted, String[] json2Splitted) {
+        if(json1Splitted.length > json2Splitted.length) {
+            this.json1=json1Splitted;
+            this.json2=json2Splitted;
+        }
+        else {
+            this.json1=json2Splitted;
+            this.json2=json1Splitted;
+        }
+    }
+
     private List<Integer> findDifferences() {
         ArrayList<Integer> differences = new ArrayList<Integer>();
         for (int i = 0; i < json1.length; i++) {
-            if (i < json2.length) {
-                if (!json1[i].equals(json2[i]))
-                    differences.add(i + 1);
-            } else
-                differences.add(i + 1);
+            if((addDifferencesToList(i) != null))
+                differences.add(addDifferencesToList(i));
         }
         return differences;
+    }
+
+    private Integer addDifferencesToList(int index) {
+        if (index < json2.length) {
+            if (!json1[index].equals(json2[index]))
+                return index+1;
+        } else
+            return index+1;
+        return null;
     }
 }
 

@@ -14,7 +14,7 @@ public class WhiteSpaceAdder extends JsonDecorator {
         super(jsonObject);
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
         String minificatedJson = removeWhiteSpaces(jsonObject.getJson());
         return addWhiteSpaces(minificatedJson);
     }

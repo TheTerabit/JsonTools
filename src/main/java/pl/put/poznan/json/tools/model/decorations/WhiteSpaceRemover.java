@@ -14,7 +14,7 @@ public class WhiteSpaceRemover extends JsonDecorator {
         super(jsonObject);
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
             return removeWhiteSpaces(jsonObject.getJson());
     }
 

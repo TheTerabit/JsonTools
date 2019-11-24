@@ -15,7 +15,7 @@ public class NullRemover extends JsonDecorator {
         super(jsonObject);
     }
 
-    public String getJson() throws WrongInputException, ParseException {
+    public String getJson() throws WrongInputException {
         String jsonString = jsonObject.getJson();
         jsonString = removeBraces(jsonString);
         List<String> jsonAttributes = getAttributes(jsonString);

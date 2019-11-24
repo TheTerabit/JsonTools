@@ -25,7 +25,7 @@ public class JsonToolsService {
         this.comparisonService = comparisonService;
     }
 
-    public String processJson(ProcessProperties processProperties) throws WrongInputException, ParseException {
+    public String processJson(ProcessProperties processProperties) throws WrongInputException {
         parametersValidator.validate(processProperties);
         JsonObject jsonObject = createJsonObject(processProperties);
         return jsonObject.getJson();
