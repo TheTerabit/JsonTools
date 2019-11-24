@@ -13,10 +13,10 @@ public class ComparisonService {
     private String[] json2;
 
     public List<Integer> compare(String json1, String json2) {
-        if (trimJson(json1).equals(trimJson(json2)) || trimJson(json1).replaceAll("\\s", "").equals(trimJson(json2).replaceAll("\\s","")))
+        if (checkJsonsEquality(json1, json2))
             return new ArrayList<Integer>();
         else {
-            compareJsons(splitJson(trimJson(json1)), splitJson(trimJson(json2)));
+            compareAndSetJsons(splitJson(trimJson(json1)), splitJson(trimJson(json2)));
             return findDifferences();
         }
     }
@@ -29,33 +29,39 @@ public class ComparisonService {
         return json.split("\\r?\\n");
     }
 
-    private void compareJsons(String[] json1Splitted, String[] json2Splitted) {
-        if(json1Splitted.length > json2Splitted.length) {
-            this.json1=json1Splitted;
-            this.json2=json2Splitted;
-        }
-        else {
-            this.json1=json2Splitted;
-            this.json2=json1Splitted;
+    private boolean checkJsonsEquality(String json1, String json2) {
+        if (trimJson(json1).equals(trimJson(json2)) || trimJson(json1).replaceAll("\\s", "").equals(trimJson(json2).replaceAll("\\s", "")))
+            return true;
+        return false;
+    }
+
+    private void compareAndSetJsons(String[] json1Splitted, String[] json2Splitted) {
+        if (json1Splitted.length > json2Splitted.length) {
+            this.json1 = json1Splitted;
+            this.json2 = json2Splitted;
+        } else {
+            this.json1 = json2Splitted;
+            this.json2 = json1Splitted;
         }
     }
 
     private List<Integer> findDifferences() {
         ArrayList<Integer> differences = new ArrayList<Integer>();
         for (int i = 0; i < json1.length; i++) {
-            if((addDifferencesToList(i) != null))
-                differences.add(addDifferencesToList(i));
+            if ((checkLinesEquality(i) != null))
+                differences.add(checkLinesEquality(i));
         }
         return differences;
     }
 
-    private Integer addDifferencesToList(int index) {
-        if (index < json2.length) {
-            if (!json1[index].equals(json2[index]))
-                return index+1;
-        } else
-            return index+1;
-        return null;
+    private Integer checkLinesEquality(int index) {
+
+        if (index < json2.length && !json1[index].equals(json2[index]))
+            return index + 1;
+        else if (index < json2.length && json1[index].equals(json2[index]))
+            return null;
+        else
+            return index + 1;
     }
 }
 

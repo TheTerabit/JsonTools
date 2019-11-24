@@ -9,7 +9,7 @@ abstract public class JsonDecorator implements JsonObject {
     protected JsonObject jsonObject;
     protected StringToJsonParser stringToJsonParser;
 
-    public JsonDecorator(JsonObject jsonObject){
+    public JsonDecorator(JsonObject jsonObject) {
         this.jsonObject = jsonObject;
         this.stringToJsonParser = new StringToJsonParser();
     }

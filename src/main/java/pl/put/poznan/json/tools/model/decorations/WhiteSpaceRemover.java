@@ -15,11 +15,10 @@ public class WhiteSpaceRemover extends JsonDecorator {
     }
 
     public String getJson() throws WrongInputException {
-            return removeWhiteSpaces(jsonObject.getJson());
+        return removeWhiteSpaces(jsonObject.getJson());
     }
 
-    private String removeWhiteSpaces(String json) throws WrongInputException
-    {
+    private String removeWhiteSpaces(String json) throws WrongInputException {
         return this.stringToJsonParser.parse(json).toString();
     }
 }
