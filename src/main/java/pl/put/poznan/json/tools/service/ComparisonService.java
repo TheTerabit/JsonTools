@@ -14,10 +14,23 @@ public class ComparisonService {
     public List<Integer> compare(String json1, String json2) {
         if (trimJson(json1).equals(trimJson(json2)))
             return new ArrayList<Integer>();
+        else if (trimJson(json1).replaceAll("\\s", "").equals(trimJson(json2).replaceAll("\\s",""))){
+            System.out.println(trimJson(json1).replaceAll("\\s", ""));
+            System.out.println(trimJson(json2).replaceAll("\\s", ""));
+            return new ArrayList<Integer>();
+        }
         else {
             String[] json1Splitted = splitJson(trimJson(json1));
             String[] json2Splitted = splitJson(trimJson(json2));
-            return json1Splitted.length > json2Splitted.length ? findDifferences(json1Splitted, json2Splitted) : findDifferences(json2Splitted, json1Splitted);
+            if(json1Splitted.length > json2Splitted.length) {
+                this.json1=json1Splitted;
+                this.json2=json2Splitted;
+            }
+            else {
+                this.json1=json2Splitted;
+                this.json2=json1Splitted;
+            }
+            return findDifferences();
         }
     }
 
@@ -29,11 +42,11 @@ public class ComparisonService {
         return json.split("\\r?\\n");
     }
 
-    private List<Integer> findDifferences(String[] json1Splitted, String[] json2Splitted) {
+    private List<Integer> findDifferences() {
         ArrayList<Integer> differences = new ArrayList<Integer>();
-        for (int i = 0; i < json1Splitted.length; i++) {
-            if (i < json2Splitted.length) {
-                if (!json1Splitted[i].equals(json2Splitted[i]))
+        for (int i = 0; i < json1.length; i++) {
+            if (i < json2.length) {
+                if (!json1[i].equals(json2[i]))
                     differences.add(i + 1);
             } else
                 differences.add(i + 1);
