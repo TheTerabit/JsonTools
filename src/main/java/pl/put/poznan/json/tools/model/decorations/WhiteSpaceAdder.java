@@ -55,8 +55,13 @@ public class WhiteSpaceAdder extends JsonDecorator {
         return json
                 .replaceAll("\":", "\": ")
                 .replaceAll("\",", "\",\n\t")
+                .replaceAll("\"\\],", "\"\\], \n\t")
+                .replaceAll("\\}\\],", "\n\t\\}\\],\n\t")
+                .replaceAll("\\}\\]\\}", "\n\t\\}\\]\n\\}")
+                .replaceAll(",\\{", ",\n\t\\{")
                 .replaceAll("\\{", "\\{\n\t")
-                .replaceAll("\"\\}", "\"\n\\}");
+                .replaceAll("\"\\},", "\"\n\t\\},\n")
+                .replaceAll("\\}$", "\n\\}");
     }
 
 }
