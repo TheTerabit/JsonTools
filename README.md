@@ -16,3 +16,6 @@
 ## DoD:
 ### https://docs.google.com/spreadsheets/d/e/2PACX-1vRh3VmprccDy5JC2hxggI1UmWwos2_ukytrvbvvzRT2BkgwskpF3wNIYTx4WXUhAopLKknACRZ65kWt/pubhtml#
 
+## UML:
+UML.png
+![UML](https://github.com/TheTerabit/JsonTools/blob/dev/UML.png)
