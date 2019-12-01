@@ -16,6 +16,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * Constructor method
+     *
      * @param jsonObject object of interface JsonObject
      */
     public NullRemover(JsonObject jsonObject) {
@@ -24,6 +25,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * main method of class that removes nulls
+     *
      * @return given JSON without null attributes as a String
      * @throws WrongInputException
      */
@@ -42,6 +44,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that removes braces at the beginning and the end of JSON String
+     *
      * @param json JSON as a String
      * @return String without first and last braces
      */
@@ -51,6 +54,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that splits JSON String to list by ", " to get all attributes separately
+     *
      * @param json JSON as a String
      * @return list of attributes from JSON String splited by ", "
      */
@@ -60,6 +64,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that splits attributes by ":" to get name and value
+     *
      * @param originalList list with attributes from JSON
      * @return list of lists with splited attributes by ":" and removed white spaces in first and last attribute
      */
@@ -78,6 +83,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that removes white spaces from given list of attributes
+     *
      * @param list list of single attribute from JSON with name and value
      * @return list of single attribute without white spaces before first argument and after second argument
      */
@@ -94,6 +100,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that removes nulls from list of attributes and merge them with a ": "
+     *
      * @param originalList list with attributes that may contain nulls
      * @return list with merged attributes without nulls
      */
@@ -110,6 +117,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that checks if value is a null
+     *
      * @param item value of attribute
      * @return false if value is a null, true if not
      */
@@ -122,6 +130,7 @@ public class NullRemover extends JsonDecorator {
 
     /**
      * method that join all attributes from given list to String with proper spacing
+     *
      * @param jsonList list with JSON attributes without nulls
      * @return JSON list as a string with braces and spacing
      */
