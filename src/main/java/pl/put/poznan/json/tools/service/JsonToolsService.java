@@ -1,17 +1,10 @@
 package pl.put.poznan.json.tools.service;
 
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.springframework.stereotype.Service;
 import pl.put.poznan.json.tools.model.*;
 import pl.put.poznan.json.tools.model.decorations.*;
 
 import java.util.List;
-
-/**
- * This is just an example to show that the logic should be outside the REST service.
- */
 
 @Service
 public class JsonToolsService {
@@ -24,23 +17,23 @@ public class JsonToolsService {
         this.comparisonService = comparisonService;
     }
 
-    public String processJson(String json, String[] attributes, String attributesMode, String whiteSpaces, String removeNulls) throws WrongInputException {
-        parametersValidator.validate(json, attributes, attributesMode, whiteSpaces, removeNulls);
-        JsonObject jsonObject = createJsonObject(json, attributes, attributesMode, whiteSpaces, removeNulls);
+    public String processJson(ProcessProperties processProperties) throws WrongInputException {
+        parametersValidator.validate(processProperties);
+        JsonObject jsonObject = createJsonObject(processProperties);
         return jsonObject.getJson();
     }
 
-    private JsonObject createJsonObject(String json, String[] attributes, String attributesMode, String whiteSpaces, String removeNulls) {
-        JsonObject jsonObject = new RawJson(json);
-        if (attributesMode.equals("delete"))
-            jsonObject = new AttributesRemover(jsonObject, attributes);
-        if (attributesMode.equals("pick"))
-            jsonObject = new AttributesPicker(jsonObject, attributes);
-        if (removeNulls.equals("true"))
+    private JsonObject createJsonObject(ProcessProperties processProperties) {
+        JsonObject jsonObject = new RawJson(processProperties.getJson());
+        if (processProperties.getRemoveNulls().equals("true"))
             jsonObject = new NullRemover(jsonObject);
-        if (whiteSpaces.equals("delete"))
+        if (processProperties.getAttributesMode().equals("delete"))
+            jsonObject = new AttributesRemover(jsonObject, processProperties.getAttributes());
+        else if (processProperties.getAttributesMode().equals("pick"))
+            jsonObject = new AttributesPicker(jsonObject, processProperties.getAttributes());
+        if (processProperties.getWhiteSpaces().equals("delete"))
             jsonObject = new WhiteSpaceRemover(jsonObject);
-        if (whiteSpaces.equals("add"))
+        else if (processProperties.getWhiteSpaces().equals("add"))
             jsonObject = new WhiteSpaceAdder(jsonObject);
 
         return jsonObject;

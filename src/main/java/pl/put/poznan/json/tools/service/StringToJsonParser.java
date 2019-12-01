@@ -10,7 +10,6 @@ public class StringToJsonParser {
 
     public JSONObject parse(String json) throws WrongInputException {
         JSONObject jsonObject;
-        System.out.println(json);
         try {
             jsonObject = (JSONObject) parser.parse(json);
         } catch (ParseException e) {
