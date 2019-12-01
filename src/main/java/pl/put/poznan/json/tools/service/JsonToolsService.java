@@ -1,18 +1,10 @@
 package pl.put.poznan.json.tools.service;
 
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 import pl.put.poznan.json.tools.model.*;
 import pl.put.poznan.json.tools.model.decorations.*;
 
 import java.util.List;
-
-/**
- * This is just an example to show that the logic should be outside the REST service.
- */
 
 @Service
 public class JsonToolsService {
@@ -33,15 +25,15 @@ public class JsonToolsService {
 
     private JsonObject createJsonObject(ProcessProperties processProperties) {
         JsonObject jsonObject = new RawJson(processProperties.getJson());
-        if (processProperties.getAttributesMode().equals("delete"))
-            jsonObject = new AttributesRemover(jsonObject, processProperties.getAttributes());
-        if (processProperties.getAttributesMode().equals("pick"))
-            jsonObject = new AttributesPicker(jsonObject, processProperties.getAttributes());
         if (processProperties.getRemoveNulls().equals("true"))
             jsonObject = new NullRemover(jsonObject);
+        if (processProperties.getAttributesMode().equals("delete"))
+            jsonObject = new AttributesRemover(jsonObject, processProperties.getAttributes());
+        else if (processProperties.getAttributesMode().equals("pick"))
+            jsonObject = new AttributesPicker(jsonObject, processProperties.getAttributes());
         if (processProperties.getWhiteSpaces().equals("delete"))
             jsonObject = new WhiteSpaceRemover(jsonObject);
-        if (processProperties.getWhiteSpaces().equals("add"))
+        else if (processProperties.getWhiteSpaces().equals("add"))
             jsonObject = new WhiteSpaceAdder(jsonObject);
 
         return jsonObject;
