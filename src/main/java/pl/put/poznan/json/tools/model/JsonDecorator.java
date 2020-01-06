@@ -18,4 +18,8 @@ abstract public class JsonDecorator implements JsonObject {
         return jsonObject.getJson();
     }
 
+    public void setStringToJsonParser(StringToJsonParser stringToJsonParser) {
+        this.stringToJsonParser = stringToJsonParser;
+    }
+
 }
