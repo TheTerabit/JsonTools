@@ -49,7 +49,7 @@ public class ParametersValidator {
     /**
      * This method compare json mode. If json is not empty and not equals to delete or pick, the exception occurred.
      *
-     * @param attributes array String of attributes specific json.
+     * @param attributes     array String of attributes specific json.
      * @param attributesMode contains specific part of json as String to compare values.
      * @throws WrongInputException
      */
