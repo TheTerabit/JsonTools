@@ -9,3 +9,4 @@ projectName.iml
 /local.properties
 target/classes
 target/generated-sources
+target/test-classes
