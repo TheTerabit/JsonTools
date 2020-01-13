@@ -1,16 +1,16 @@
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\ProcessProperties.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\JsonObject.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\WrongInputException.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\JsonToolsService.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\controller\JsonToolsController.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\App.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\AttributesRemover.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\RawJson.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\AttributesPicker.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\NullRemover.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\ComparisonService.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\WhiteSpaceRemover.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\JsonDecorator.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\WhiteSpaceAdder.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\ParametersValidator.java
-C:\Users\User\Desktop\Studia\Semestr_5\IO\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\StringToJsonParser.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\AttributesPicker.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\ProcessProperties.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\AttributesRemover.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\WhiteSpaceRemover.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\RawJson.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\controller\JsonToolsController.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\JsonToolsService.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\App.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\NullRemover.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\ParametersValidator.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\decorations\WhiteSpaceAdder.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\JsonObject.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\StringToJsonParser.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\model\JsonDecorator.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\ComparisonService.java
+D:\Bartek\Studia\Semestr 5\Inzynieria oprogramowania\Projekt\JsonTools\src\main\java\pl\put\poznan\json\tools\service\WrongInputException.java
