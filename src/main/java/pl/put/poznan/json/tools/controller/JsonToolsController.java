@@ -1,16 +1,13 @@
 package pl.put.poznan.json.tools.controller;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import pl.put.poznan.json.tools.model.JsonComparisonWrapper;
 import pl.put.poznan.json.tools.service.JsonToolsService;
 import pl.put.poznan.json.tools.service.WrongInputException;
 
 import java.util.List;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api")
 public class JsonToolsController {
