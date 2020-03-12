@@ -2,6 +2,13 @@
 
 ## Java / Spring
 
+# Swagger:
+http://json-tools.herokuapp.com/swagger-ui.html#/
+
+### POST requests at:
+http://json-tools.herokuapp.com/api/compare
+http://json-tools.herokuapp.com/api/process
+
 ## Collaborators:
 
 <a href="https://github.com/BartekPrz"><img src="https://avatars3.githubusercontent.com/u/38264818?s=400&v=4" title="BartekPrz" width="80" height="80"></a>
