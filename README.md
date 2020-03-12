@@ -16,3 +16,8 @@
 ## DoD:
 ### https://docs.google.com/spreadsheets/d/e/2PACX-1vRh3VmprccDy5JC2hxggI1UmWwos2_ukytrvbvvzRT2BkgwskpF3wNIYTx4WXUhAopLKknACRZ65kWt/pubhtml#
 
+## UML:
+![UML](https://github.com/TheTerabit/JsonTools/blob/dev/UML.png)
+
+## Retroperspektywa Sprintu 1
+Wszystkie założenia zostały spełnione. Podział pracy był adekwatny do możliwości członków zespołu. Zadania były realizowane w terminie. Brak elementów aplikacji oraz metodyki pracy do poprawy.

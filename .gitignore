@@ -7,4 +7,6 @@ projectName.iml
 *.iml
 /build
 /local.properties
-target/
+target/classes
+target/generated-sources
+target/test-classes
