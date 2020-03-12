@@ -1,12 +1,8 @@
 package pl.put.poznan.json.tools.model.decorations;
 
-import org.json.simple.parser.ParseException;
 import pl.put.poznan.json.tools.model.JsonDecorator;
 import pl.put.poznan.json.tools.model.JsonObject;
-import pl.put.poznan.json.tools.service.ParametersValidator;
-import pl.put.poznan.json.tools.service.StringToJsonParser;
 import pl.put.poznan.json.tools.service.WrongInputException;
-
 
 /**
  * This is one of the decoration class, which remove white spaces from json and returns file as string

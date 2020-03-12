@@ -10,7 +10,6 @@ import pl.put.poznan.json.tools.service.WrongInputException;
 
 import java.util.List;
 
-
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
