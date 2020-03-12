@@ -2,7 +2,7 @@
 
 ## Java / Spring
 
-# Swagger:
+### Swagger:
 http://json-tools.herokuapp.com/swagger-ui.html#/
 
 ### POST requests at:
