@@ -1,10 +1,10 @@
 # JsonTools
 
 ## Java / Spring / REST API
-
+---
 
 ## POST request at:
-http://json-tools.herokuapp.com/api/process
+### http://json-tools.herokuapp.com/api/process
 
   ### Body
   Any JSON document to process.
@@ -20,7 +20,7 @@ http://json-tools.herokuapp.com/api/process
 ---
 
 ## POST request at:
-## http://json-tools.herokuapp.com/api/compare
+### http://json-tools.herokuapp.com/api/compare
 
   ### Body
   String containing two JSONs seperated by `###`. Endpoint returns a list of line numbers with differences.
