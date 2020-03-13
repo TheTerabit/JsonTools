@@ -1,29 +1,29 @@
 # JsonTools
 
-## Java / Spring
+## Java / Spring / REST API
 
 
 ## POST request at:
 http://json-tools.herokuapp.com/api/process
 
-### Body
-Any JSON document to process.
+  ### Body
+  Any JSON document to process.
 
-### Parameters
-| Name | Type | Description |
-| --- | --- | --- |
-| `whiteSpaces` | String | Can be one of `add` (makes JSON looks pretty) or `delete` (minifies JSON to one line). Default: `add` |
-| `removeNulls` | Boolean | When `true` returns JSON without all empty fields e.g. "", [], null. Default: `false` |
-| `attributesMode` | String | Can be one of `pick` (returns fields specified in `attributes` parameter) or `delete` (returns fields not specified in `attributes` parameter). Default: `delete` |
-| `attributes` | List<String> | List of fields to be picked or deleted depending on `attributesMode` value. Default: `null` |
+  ### Parameters
+  | Name | Type | Description |
+  | --- | --- | --- |
+  | `whiteSpaces` | string | Can be one of `add` (makes JSON looks pretty) or `delete` (minifies JSON to one line). Default: `add` |
+  | `removeNulls` | boolean | When `true` returns JSON without all empty fields e.g. "", [], null. Default: `false` |
+  | `attributesMode` | string | Can be one of `pick` (returns fields specified in `attributes` parameter) or `delete` (returns fields not specified in `attributes` parameter). Default: `delete` |
+  | `attributes` | string | Comma-separated list of fields to be picked or deleted depending on `attributesMode` value. Default: `null` |
 
 ---
 
 ## POST request at:
 ## http://json-tools.herokuapp.com/api/compare
 
-### Body
-String containing two JSONs seperated by `###`. Endpoint returns a list of line numbers with differences.
+  ### Body
+  String containing two JSONs seperated by `###`. Endpoint returns a list of line numbers with differences.
 
 ---
 
