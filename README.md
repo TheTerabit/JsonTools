@@ -2,13 +2,10 @@
 
 ## Java / Spring
 
-### Swagger:
-http://json-tools.herokuapp.com/swagger-ui.html#/
 
-## POST requests at:
-## http://json-tools.herokuapp.com/api/compare
-
+## POST request at:
 http://json-tools.herokuapp.com/api/process
+
 ### Body
 Any JSON document to process.
 
@@ -20,9 +17,16 @@ Any JSON document to process.
 | `attributesMode` | String | Can be one of `pick` (returns fields specified in `attributes` parameter) or `delete` (returns fields not specified in `attributes` parameter). Default: `delete` |
 | `attributes` | List<String> | List of fields to be picked or deleted depending on `attributesMode` value. Default: `null` |
 
-## http://json-tools.herokuapp.com/api/process
+---
+
+## POST request at:
+## http://json-tools.herokuapp.com/api/compare
+
 ### Body
 String containing two JSONs seperated by `###`. Endpoint returns a list of line numbers with differences.
+
+---
+
 
 
 ## Collaborators:
